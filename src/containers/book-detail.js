@@ -5,14 +5,15 @@ class BookDetail extends Component{
   render(){
     if(!this.props.book){
       return(
-        <div>Select a book to get started</div>
+        <div>Please select a book to get started !!</div>
       )
     }
     return(
       <div>
-        <h3>Details for:</h3>
-        <div>Title: {this.props.book.title}</div>
-        <div>Pages: {this.props.book.pages}</div>
+        <div className="book-detail-heading">Details about selected book:</div>
+        <div><span className="bold-text">Title:</span> {this.props.book.title}</div>
+        <div><span className="bold-text">Author:</span> {this.props.book.author}</div>
+        <div><span className="bold-text">Reviews:</span> {this.props.book.review}</div>
       </div>
     );
   }
